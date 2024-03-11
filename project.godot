@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="my2dgame"
+config/name="Maozi_godot_game_1"
 run/main_scene="res://gamemanager.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
