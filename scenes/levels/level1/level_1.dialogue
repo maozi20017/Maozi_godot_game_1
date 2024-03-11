@@ -1,0 +1,18 @@
+~ start
+do emit("start_talking")
+毛子: 關卡不會太難
+
+- 下一關
+	do emit("next_level_signal")
+	
+- 關於 毛子
+	遊戲作者，喜歡機甲和像素類遊戲\n目前在中部求職受挫，開始考慮去北部求職_(:3 」∠ )_
+	=> start
+	
+- 再講一次
+	=> start
+	
+- 再見
+	do emit("stop_talking")
+	=> END
+=> END

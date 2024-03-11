@@ -1,0 +1,23 @@
+~ start
+do emit("start_talking")
+SABBA HOSTUMEXA: 按鈕可以切換對應顏色的光束
+
+
+- 下一關
+	do emit("next_level_signal")
+	
+- 關於 SABBA HOSTUMEXA
+	作者的大學室友，畢業專題組長
+	warframe遊玩時數6143小時
+	還在研究所等畢業
+	我們懷念他
+	=> start
+	
+- 再講一次
+	=> start
+	
+- 再見
+	do emit("stop_talking")
+	=> END
+
+=> END
