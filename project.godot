@@ -11,16 +11,16 @@ config_version=5
 [application]
 
 config/name="Maozi_godot_game_1"
-run/main_scene="res://gamemanager.tscn"
+run/main_scene="res://gamemanager/gamemanager.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
-Global="*res://scenes/global/global.gd"
-MusicControl="*res://scenes/musiccontrol/musiccontrol.tscn"
-Buttons="*res://scenes/buttons/buttons.gd"
+Global="*res://global/global.gd"
+MusicControl="*res://musiccontrol/musiccontrol.tscn"
+Buttons="*res://buttons/buttons.gd"
 
 [dialogue_manager]
 
@@ -67,7 +67,16 @@ use={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://scenes/levels/level1/level_1.dialogue", "res://scenes/levels/level2/level_2.dialogue", "res://scenes/levels/level3/level_3.dialogue", "res://scenes/levels/level4/level_4.dialogue", "res://begin.dialogue")
+locale/translations_pot_files=PackedStringArray("res://gamemanager/begin.dialogue", "res://levels/level1/level_1.dialogue", "res://levels/level2/level_2.dialogue", "res://levels/level3/level_3.dialogue", "res://levels/level4/level_4.dialogue", "res://levels/level5/level_5.dialogue")
+
+[layer_names]
+
+2d_physics/layer_1="commen"
+2d_physics/layer_2="player"
+2d_physics/layer_3="beam"
+2d_physics/layer_4="button"
+2d_physics/layer_5="groundedbutton"
+2d_physics/layer_6="npc"
 
 [rendering]
 

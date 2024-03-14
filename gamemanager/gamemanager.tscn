@@ -1,0 +1,30 @@
+[gd_scene load_steps=8 format=3 uid="uid://cwq2oj5ky6u1n"]
+
+[ext_resource type="Script" path="res://gamemanager/gamemanager.gd" id="1_6m4a8"]
+[ext_resource type="Resource" uid="uid://bu58miva3iitr" path="res://gamemanager/begin.dialogue" id="2_sw8rp"]
+[ext_resource type="PackedScene" uid="uid://cvubb1retk87c" path="res://levels/level1/level_1.tscn" id="3_r8ky7"]
+[ext_resource type="PackedScene" uid="uid://dn5khdivjrrqj" path="res://ui/pause_menu.tscn" id="4_mvh2o"]
+[ext_resource type="PackedScene" uid="uid://71q06sljq0lm" path="res://transitioner/transitioner.tscn" id="5_iyi2h"]
+[ext_resource type="PackedScene" uid="uid://bdvo41hwuovm6" path="res://camera/main_camera.tscn" id="6_atiai"]
+[ext_resource type="PackedScene" uid="uid://cxpwfsglsp437" path="res://player/player.tscn" id="7_ke1sn"]
+
+[node name="GameManager" type="Node" node_paths=PackedStringArray("transitioner")]
+process_mode = 3
+script = ExtResource("1_6m4a8")
+begin_dialogue = ExtResource("2_sw8rp")
+transitioner = NodePath("Transitioner")
+
+[node name="Level1" parent="." instance=ExtResource("3_r8ky7")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" node_paths=PackedStringArray("game_manager") instance=ExtResource("4_mvh2o")]
+game_manager = NodePath("../..")
+
+[node name="Transitioner" parent="." instance=ExtResource("5_iyi2h")]
+
+[node name="MainCamera" parent="." instance=ExtResource("6_atiai")]
+
+[node name="Player" parent="." instance=ExtResource("7_ke1sn")]
+position = Vector2(200, 168)
+scale = Vector2(3, 3)

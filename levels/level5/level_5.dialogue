@@ -1,0 +1,22 @@
+~ start
+do emit("start_talking")
+兔玖: 要來玩minecraft嗎?
+毛子: 我只做到這而已
+
+- 結束
+	do emit("next_level_signal")
+	
+- 關於 兔玖
+	dc群組的朋友
+	是個獸控
+	珍惜生命，遠離獸控
+	=> start
+	
+- 再講一次
+	=> start
+	
+- 再見
+	do emit("stop_talking")
+	=> END
+
+=> END

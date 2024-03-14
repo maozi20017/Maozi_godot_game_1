@@ -1,0 +1,22 @@
+~ start
+do emit("start_talking")
+andyjim321: 超爆炸好玩
+
+- 下一關
+	do emit("next_level_signal")
+	
+- 關於 andyjim321
+	作者當兵時的鄰兵，有個雙胞胎弟弟
+	原神玩家\n會大喊"原神，啟動！"
+	只花了不到半年的時間考上N1
+	現在沉迷楓之谷
+	=> start
+	
+- 再講一次
+	=> start
+	
+- 再見
+	do emit("stop_talking")
+	=> END
+
+=> END
